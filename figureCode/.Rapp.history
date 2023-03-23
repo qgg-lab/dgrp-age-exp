@@ -1,0 +1,262 @@
+0.6 /(1-0.4^2*0.5)
+(0.6 - 0.6*0.4*0.4*0.5)/(1-2*0.6*0.4*0.4*0.5 - 0.4^2*0.5)
+(0.6 - 0.6*0.4*0.5)/(1-2*0.6*0.4*0.5 - 0.4^2*0.5)
+sel <- function(p, q, h, s) {}
+sel <- function(p, q, h, s) { return((p - p*(1-p)*h*s)/(1-2*p*(1-p)*h*s - q^2 * s)) }
+sel <- function(p, h, s) { return((p - p*(1-p)*h*s)/(1-2*p*(1-p)*h*s - q^2 * s)) }
+sel(0.6, 0, 0.5)
+sel <- function(p, h, s) { return((p - p*(1-p)*h*s)/(1-2*p*(1-p)*h*s - (1-p)^2 * s)) }
+sel(0.6, 0, 0.5)
+sel(0.6, 0.4, 0.5)
+sel(0.6, 1, 0.5)
+sel(0.4, 0, 0.5)
+sel(0.4, 0.4, 0.5)
+sel(0.4, 1, 0.5)
+sel(0.1, 0, 0.5)
+sel(0.1, 0.4, 0.5)
+sel(0.1, 1, 0.5)
+0.6 - 0.6*0.4*0.5
+1-0.48*0.5 - 0.16*0.5
+0.09*0.04
+0.88/0.9
+0.88/0.9*0.81
+0.111^2
+1-0.111
+2 * 0.111 * 0.889 *100
+0.889^2 *100
+1/9
+05/9
+144*0.14
+144*0.32
+144*0.03
+0.8^3*0.38
+1638/117000
+1000/85000
+0.4*sqrt(60)
+0.4*sqrt(6)
+15/16
+5922+9182+9116
+5922+9182+9116+2331+5543+5543
+1625+1625
+6099+9457+9389+8523+2424+5765+5765
+6099+9457+9389+2424+5765+5765
+1706+1706
+37637+3250+4500+6500+3200
+38899+3412+4500+2500+3200
+675*240
+1.5/12
+5.42+15.09+22.80
+45589892/47856446
+capabilities()
+install.packages("extrafontdb")
+plot(1:5, type = "n", axes = F)
+axis(side = 1, at = c(1, 2))
+?layout
+?barplot
+load("~/Downloads/tmp.RData")
+ls()
+head(chr1)
+hist(chr1$MAF)
+hist(chr1$MAF, breaks = seq(0, 0.5, 0.005))
+hist(chr1$MAF, breaks = seq(0, 0.5, 0.01))
+hist(chr1$MAF, breaks = seq(0, 0.5, 0.005))
+hist(chr1$MAF, breaks = seq(0, 0.5, 0.005), space = 0)
+hist(chr1$MAF, breaks = seq(0, 0.5, 0.005), border = NA)
+hist(chr1$MAF, breaks = seq(0, 0.5, 0.005), border = 0)
+hist(chr1$MAF, breaks = seq(0, 0.5, 0.005), border = "green")
+hist(chr1$MAF, breaks = seq(0, 0.5, 0.005), border = "green", col = "red")
+hist(chr1$MAF, breaks = seq(0, 0.5, 0.005), border = NA, col = "red")
+library(RColorBrewer)
+display.brewer.all()
+485+551+543+580
+display.brewer.all()
+?polygon
+1036+543
+56.85+24.87+88.84+5.33
+175.89*0.8
+56.85*0.8
+choose(200, 2)
+?sample
+load("~/work/projects/swim/paper/reportData/bf.s21.pval.RData")
+ls()
+head(impute.pval)
+plot(impute.pval[, 3], impute.pval[, 4])
+hist(impute.pval[, 6])
+png("~/Downloads/test.png")
+plot(impute.pval[, 3], impute.pval[, 4])
+dev.off()
+pdf("test.pdf")
+install.packages("png")
+library("png")
+test <- readPNG("~/Downloads/test.png")
+plot(1:10)
+rasterImage(test, 3, 3, 7, 7)
+dev.off()
+plot(chr.cum[as.character(impute.pval[, 1])] + impute.pval[, 3], -log10(impute.pval[, 6]))
+?png
+?arrows
+nchar("xvvhuvubormdlunf")
+0.5/14
+0.5/14*40
+15827832-15643342
+?legend
+?runif
+38737*2 + 6
+647+100++8.49*2+17.99+14.99*2
+0.482316+3.585733+0.588669+0.512606+1.221833
+1.06^10
+1.06^20
+12*0.1375
+tfam <- read.table(paste("~/work/ncsu/projects/diallel2/reportData/top.snp.geno.tfam", sep = ""), as.is = TRUE, header = FALSE)
+head(tfam)
+tfam <- read.table(paste("~/work/ncsu/projects/diallel2/reportData/top.snp.geno.tfam", sep = ""), as.is = TRUE, header = FALSE)#
+n.ind <- nrow(tfam)#
+tped <- matrix(scan("~/work/ncsu/projects/diallel2/reportData/top.snp.geno.tped", what = ""), ncol = 4 + 2*n.ind, byrow = TRUE)
+head(tped)
+geno <- tped[, seq(5, ncol(tped), 2)]
+tped <- matrix(scan("~/work/ncsu/projects/diallel2/reportData/top.snp.geno.tped", what = "", na.strings = "0"), ncol = 4 + 2*n.ind, byrow = TRUE)#
+#
+geno <- tped[, seq(5, ncol(tped), 2)]
+geno[1:5, 1:5]
+head(tfam)
+dgrp.lines <- tfam[, 1]
+dim(geno)
+prod <- read.csv("~/work/ncsu/projects/diallel2/reportData/dgrp.prod.data.csv", header = TRUE, as.is = TRUE)
+head(prod)
+str(prod)
+sum(is.na(prod[, 3]))
+head(sort(prod[, 3]))
+prod <- read.csv("~/work/ncsu/projects/diallel2/reportData/dgrp.prod.data.csv", header = TRUE, as.is = TRUE, na.strings = ".")
+head(prod)
+str(prod)
+prod[is.na(prod[, 3]), 3] <- 0
+summary(prod[, 3])
+boxplot(prod[, 3])
+head(prod)
+prod[prod[, 4] == 25 & prod[, 5] == 25, 3]
+prod25 <- [prod[, 4] == 25 & prod[, 5] == 25, ]
+prod25 <- prod[prod[, 4] == 25 & prod[, 5] == 25, ]
+head(prod25)
+summary(prod25[, 3])
+sapply(split(prod25[, 3], paste("line_", prod25[, 1], sep = "")), mean)
+dgrp.prod <- sapply(split(prod25[, 3], paste("line_", prod25[, 1], sep = "")), mean)
+dgrp.prod25 <- sapply(split(prod25[, 3], paste("line_", prod25[, 1], sep = "")), mean)
+dgrp.prod25
+names(dgrp.prod25)
+head(geno)
+colnames(geno) <- dgrp.lines
+boxplot(dgrp.prod25 ~ geno[15, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[15, names(dgrp.prod25)])
+tped
+t.test(dgrp.prod25 ~ geno[15, names(dgrp.prod25)])
+boxplot(dgrp.prod25 ~ geno[15, names(dgrp.prod25)])
+boxplot(dgrp.prod25 ~ geno[1, names(dgrp.prod25)])
+boxplot(dgrp.prod25 ~ geno[2, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[2, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[1, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[3, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[4, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[5, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[6, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[7, names(dgrp.prod25)])
+boxplot(dgrp.prod25 ~ geno[7, names(dgrp.prod25)])
+boxplot(dgrp.prod25 ~ geno[8, names(dgrp.prod25)])
+boxplot(dgrp.prod25 ~ geno[9, names(dgrp.prod25)])
+boxplot(dgrp.prod25 ~ geno[10, names(dgrp.prod25)])
+boxplot(dgrp.prod25 ~ geno[11, names(dgrp.prod25)])
+boxplot(dgrp.prod25 ~ geno[12, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[7, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[8, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[9, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[10, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[11, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[12, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[13, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[14, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[15, names(dgrp.prod25)])
+tped <- matrix(scan("~/work/ncsu/projects/diallel2/reportData/top.snp.geno.tped", what = "", na.strings = "0"), ncol = 4 + 2*n.ind, byrow = TRUE)
+head(tped)
+head(tped[, 1:5])
+(tped[, 1:5])
+boxplot(dgrp.prod25 ~ geno[15, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[15, names(dgrp.prod25)])
+t.test(dgrp.prod25 ~ geno[9, names(dgrp.prod25)])
+source("http://bioconductor.org/biocLite.R")#
+biocLite("sva")
+BiocManager::install("sva")
+install.packages("BiocManager")
+BiocManager::install("sva")
+library("sva")
+?sva
+?hist
+library(WGCNA)
+install.packages("WGCNA")
+library("WGCNA")
+if (!require("BiocManager", quietly = TRUE))#
+    install.packages("BiocManager")#
+#
+BiocManager::install("GO.db")
+if (!require("BiocManager", quietly = TRUE))#
+    install.packages("BiocManager")#
+#
+BiocManager::install("impute")
+if (!require("BiocManager", quietly = TRUE))#
+    install.packages("BiocManager")#
+#
+BiocManager::install("preprocessCore")
+library(WGCNA)
+BiocManager::install("impute")
+library("RColorBrewer")
+cor100 <- seq(-1, 1, by = 0.02)#
+n.col <- length(cor100)#
+par(las = 1, tcl = -0.2, mar = c(1, 10, 0, 10), ps = 7, lwd = 0.5)#
+#
+# plot the scale bar#
+plot(c(0, length(cor100) + 1), c(0, 3), type = "n", axes = FALSE, xlab = "", ylab = "")#
+image(1:length(cor100), 1:2, matrix(rep(cor100, 2), ncol = 2, byrow = F), col = colorRampPalette(c(brewer.pal(9, "Blues")[9], "white", brewer.pal(9, "Reds")[9]))(101), add = TRUE, useRaster = T)
+rect(0.5, 0.5, length(cor100) + 0.5, 2.5, lwd = 0.5)
+text(0, 1.5, "Pearson correlation", pos = 2, cex = 7/par("ps")/par("cex"), xpd = TRUE)
+segments((1:length(cor100))[round(cor100, 2) %in% round(seq(-1, 1, 0.2), 2)], 0.5, (1:length(cor100))[round(cor100, 2) %in% round(seq(-1, 1, 0.2), 2)], 0.8, lwd = 0.5)
+text((1:length(cor100))[round(cor100, 2) %in% round(seq(-1, 1, 0.2), 2)] + 10, -0.05, seq(-1, 1, 0.2), xpd = TRUE, srt = 60, pos = 2, cex = 6/par("ps")/par("cex"))
+?image
+ls()
+load("~/work/projects/dgrp-age-exp/figureData/female.wgcna.RData")
+ls()
+blup.25c.cor[1:5, 1:5]
+conn.25c <- (rowSums(abs(blup.25c.cor)) - 1)/(nrow(blup.25c.cor) -  1)
+conn.25c
+conn.18c <- (rowSums(abs(blup.18c.cor)) - 1)/(nrow(blup.18c.cor) -  1)
+plot(conn.25c, conn.18c)
+hist(conn.25c - conn.18c)
+hist(conn.18c - conn.25c)
+t.test(conn.18c, conn.25c)
+?t.test
+t.test(conn.18c, conn.25c. paired = T)
+t.test(conn.18c, conn.25c, paired = T)
+load("~/work/projects/dgrp-age-exp/figureData/male.wgcna.RData")#
+conn.18c <- (rowSums(abs(blup.18c.cor)) - 1)/(nrow(blup.18c.cor) -  1)#
+conn.25c <- (rowSums(abs(blup.25c.cor)) - 1)/(nrow(blup.25c.cor) -  1)
+t.test(conn.18c, conn.25c, paired = T)
+hist(conn.18c - conn.25c)
+install.packages("NetworkDistance")
+library("NetworkDistance")
+?nd.edd
+data(graph20)
+graph20
+output = nd.edd(graph20, out.dist=FALSE)
+opar <- par(no.readonly=TRUE)#
+par(pty="s")#
+image(output$D[,20:1], main="two group case", axes=FALSE, col=gray(0:32/32))
+graph20
+output
+library("RColorBrewer")
+display.brewer.all()
+install.packages("openxlsx")
+install.packages("mediation")
+library(mediation)
+?mediate
+setwd("~/work/projects/dgrp-age-exp/figureCode")
+load("../figureData/female.qtt.diff.gsea.fdr.RData")
+ls()
+bp.pos.fdr
+bp.pos.fdr["GO:0006099", ]
