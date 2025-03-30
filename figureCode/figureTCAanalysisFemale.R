@@ -109,6 +109,13 @@ all.tca.gene <- unique(c(bp.go.gene, kegg.gene))
 young.cor <- blup.25c.cor[all.tca.gene, all.tca.gene]
 old.cor <- blup.18c.cor[all.tca.gene, all.tca.gene]
 
+# scsbetaA
+cbind(young.cor["FBgn0037643", ], old.cor["FBgn0037643", ], gene.info[colnames(young.cor), 2])
+# cg5214 FBgn0037891
+cbind(young.cor["FBgn0037891", ], old.cor["FBgn0037891", ], gene.info[colnames(young.cor), 2])
+# kdn FBgn0261955
+cbind(young.cor["FBgn0261955", ], old.cor["FBgn0261955", ], gene.info[colnames(young.cor), 2])
+
 # get network
 # ============================================================
 
@@ -234,7 +241,7 @@ rect(min(module1) - 0.5, min(module1) - 0.5, max(module1) + 0.5, max(module1) + 
 # young
 
 par(las = 1, tcl = -0.2, mar = c(0.5, 0.5, 0.5, 0.5), ps = 7, lwd = 0.5)
-plot.igraph(young.graph, layout = old.layout, vertex.color = ifelse(blup.25c.tree[old.gene.id] == 1 & blup.18c.tree[old.gene.id] == 1, brewer.pal(12, "Set3")[4], brewer.pal(12, "Set3")[1]), vertex.size = 20, vertex.label.color = "black", vertex.frame.color = NA, edge.width = 0.5, vertex.label.font = 3, vertex.label.cex = 2.2/par("ps")/par("cex"), vertex.label.family = args[6])
+plot.igraph(young.graph, layout = old.layout, vertex.color = ifelse(blup.25c.tree[old.gene.id] == 1 & blup.18c.tree[old.gene.id] == 1, brewer.pal(12, "Set3")[5], brewer.pal(12, "Set3")[6]), vertex.size = 20, vertex.label.color = "black", vertex.frame.color = NA, edge.width = 0.5, vertex.label.font = 3, vertex.label.cex = 2.2/par("ps")/par("cex"), vertex.label.family = args[6])
 text(min(par('usr')[1:2]) + 0.2*(par('usr')[2] - par('usr')[1]), max(par('usr')[3:4]), "Young", pos = 1, adj = 2, cex = 7/par("ps")/par("cex"))
 text(grconvertX(0.05, from = "inches", to = "user"), grconvertY(1, from = "nfc", to = "user"), expression(bold("b")), cex = 9/par("ps")/par("cex"), pos = 1, xpd = TRUE)
 
@@ -245,7 +252,7 @@ plot(c(0, 1), c(0, 1), type = "n", axes = FALSE, xlab = "", ylab = "'")
 straightarrow(c(0, 0.5), c(0.92, 0.5), arr.pos = 1, lwd = 1, arr.length = 0.15, arr.width = 0.1)
 
 par(las = 1, tcl = -0.2, mar = c(0.5, 0.5, 0.5, 0.5), ps = 7, lwd = 0.5)
-plot.igraph(old.graph, layout = old.layout, vertex.color = ifelse(blup.25c.tree[old.gene.id] == 1 & blup.18c.tree[old.gene.id] == 1, brewer.pal(12, "Set3")[4], brewer.pal(12, "Set3")[1]), vertex.size = 20, vertex.label.color = "black", vertex.frame.color = NA, edge.width = 0.5, vertex.label.font = 3, vertex.label.cex = 2.2/par("ps")/par("cex"), vertex.label.family = args[6])
+plot.igraph(old.graph, layout = old.layout, vertex.color = ifelse(blup.25c.tree[old.gene.id] == 1 & blup.18c.tree[old.gene.id] == 1, brewer.pal(12, "Set3")[5], brewer.pal(12, "Set3")[6]), vertex.size = 20, vertex.label.color = "black", vertex.frame.color = NA, edge.width = 0.5, vertex.label.font = 3, vertex.label.cex = 2.2/par("ps")/par("cex"), vertex.label.family = args[6])
 
 text(min(par('usr')[1:2]) + 0.2*(par('usr')[2] - par('usr')[1]), max(par('usr')[3:4]), "Aged", pos = 1, adj = 2, cex = 7/par("ps")/par("cex"))
 
