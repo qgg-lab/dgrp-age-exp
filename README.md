@@ -10,5 +10,7 @@ The codes are organized in the following directories:
 
 - sbatch: sbatch scripts for submission to the MSU HPCC
 
-- figureCode: codes used to generate figures
+- figureCode: codes used to generate figures and tables
+
+- figureData: data used to generate figures and tables
 
